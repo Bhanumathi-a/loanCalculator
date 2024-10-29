@@ -36,20 +36,21 @@ const LoanLayout = () => {
         <div className='relative mb-8'>
           <label
             htmlFor='loanAmt'
-            className='block text-xl font-sans leading-6 pb-7 '>
+            className='block text-xl font-sans leading-6 pb-1 '>
             Loan Amount
           </label>
           <input
             id='loanAmt'
-            type='range'
+            type='text'
+            // type='range'
             min='100000'
             max='10000000'
             step='10'
-            className='w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 accent-blue-900'
+            className='w-full  bg-gray-200 rounded-lg  dark:bg-gray-700 accent-blue-900 h-12 p-2'
             value={loanAmount}
             onChange={(e) => setLoanAmount(e.target.value)}
           />
-          <span
+          {/* <span
             className={`bg-blue-900 -mt-8 text-white truncate text-sm rounded py-1 px-4 absolute bottom-5 `}
             style={{ left: 0 }}>
             ₹{loanAmount}
@@ -61,7 +62,7 @@ const LoanLayout = () => {
 
           <span className='text-sm text-gray-500 dark:text-gray-400 absolute end-0 -bottom-6'>
             ₹ 10000000
-          </span>
+          </span> */}
         </div>
         <div className='grid grid-cols-1 gap-5 mb-10 lg:grid-cols-2'>
           <div className='relative mb-8 w-full inline-block'>
